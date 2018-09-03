@@ -1,21 +1,18 @@
 class CashRegister
   
-  attr_accessor :total, :title, :price, :discount
-  
-  @@items = []
+  attr_accessor :total, :title, :price, :discount 
   
   def initialize(discount= 0) #optional args come last in parens
     @total = 0
     @discount = discount
-    @title = title 
-    @price = price
+    @title = title
+    @items = []
   end
   
   
   def add_item(title, price, quantity = 1)
-    
     @total = @total + price*quantity
-    @@items << title
+    @items << title
     return total 
   end
   
@@ -30,5 +27,5 @@ class CashRegister
   end
   
   def items
-    return @@items
+    @items
   end
