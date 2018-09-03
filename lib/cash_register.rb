@@ -8,7 +8,6 @@ class CashRegister
     @total = 0
     @discount = discount
     @title = title 
-    
     @price = price
   end
   
@@ -31,5 +30,5 @@ class CashRegister
   end
   
   def items
-    @@items
+    return @@items
   end
